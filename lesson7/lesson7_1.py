@@ -18,6 +18,7 @@ def get_ststus(bmi:float)->str:  #(bmi:float) 為參數 ，->str 為return 出ty
 
 def get_bmi(w:int,h:int)->float:
     return round(w/pow(h/100,2),1)
+
 def main():
     height:int = int(input("請輸入身高公分"))
     weight:int = int(input("請輸入體重公斤"))
