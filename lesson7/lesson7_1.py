@@ -1,5 +1,5 @@
 # BMI 計算公式
-#__name__== '__main__'----> 主要執行檔
+#__name__== '__main__'----> 主要執行檔 ，__
 def get_ststus(bmi:float):  #(bmi:float) 為參數
     if bmi < 18.5:
         status = "體重過輕"
@@ -24,7 +24,6 @@ def main():
     print(f"體重:{weight}""kg")
     print(f"BMI:{BMI}")
     get_ststus(BMI)  #(BMI)引數值(真正的值)
-
     
 if __name__== '__main__':
     main()
