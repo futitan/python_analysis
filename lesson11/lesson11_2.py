@@ -1,0 +1,1 @@
+print ('hello! lesson11_2.py')
