@@ -1,6 +1,6 @@
 # pip install -r requirements.txt
-requests
-matplotlib
-wget
+requests #下載檔案的資料
+matplotlib #繪圖
+wget #下載檔案
 numpy
 pandas
