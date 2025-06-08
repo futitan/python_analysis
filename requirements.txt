@@ -4,3 +4,4 @@ matplotlib #繪圖
 wget #下載檔案
 numpy
 pandas
+openpyxl
