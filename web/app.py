@@ -47,5 +47,5 @@ def handle_message(event):
     model="gemini-2.5-flash", contents=event.message.text
     )
     message = TextSendMessage(text=response.text)
-    line_bot_api.reply_message(event.reply_token, message)
-
+    #line_bot_api.reply_message(event.reply_token, message)
+    line_bot_api.reply_message(event.reply_token, '200')
