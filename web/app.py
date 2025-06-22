@@ -1,5 +1,9 @@
 #flask  https://flask.palletsprojects.com/en/stable/
 #Flask 和 Django 都是 Python 常用的 Web 框架  https://www.perplexity.ai/search/python-min-ru-he-shi-yong-qing-IKspVcELRvGQd6hECJaqjQ8
+
+#flask --app app run  (第2個APP 使檔名) 修改時要關閉再啟動
+#flask --app app run --debug  修改時不需關閉再啟動，自己會關閉重啟
+
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
@@ -9,7 +13,7 @@ from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
-client = genai.configure(api_key=os.environ['Gemini_API_KEY'])
+client = genai.Client(api_key=os.environ['Gemini_API_KEY'])
 
 
 line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
@@ -23,6 +27,7 @@ def index(question:str=""):
     html_format = response.text
     html_format = html_format.replace("```html","").replace("```","")
     return html_format
+
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -44,5 +49,3 @@ def handle_message(event):
     message = TextSendMessage(text=response.text)
     line_bot_api.reply_message(event.reply_token, message)
 
-#flask --app app run  (第2個APP 使檔名) 修改時要關閉再啟動
-#flask --app app run --debug  修改時不需關閉再啟動，自己會關閉重啟
