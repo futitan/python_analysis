@@ -1,0 +1,3 @@
+requests
+flask
+gunicorn   #flask 用WSGI伺服器
