@@ -1,3 +1,5 @@
 requests
 flask
 gunicorn   #flask 用WSGI伺服器
+python-dotenv
+google-genai
