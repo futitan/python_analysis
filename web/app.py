@@ -28,6 +28,9 @@ def index(question:str=""):
     html_format = html_format.replace("```html","").replace("```","")
     return html_format
 
+@app.route("/abc")
+def abc():
+    return "<H1>abc</H1>"
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -47,5 +50,5 @@ def handle_message(event):
     model="gemini-2.5-flash", contents=event.message.text
     )
     message = TextSendMessage(text=response.text)
-    #line_bot_api.reply_message(event.reply_token, message)
-    line_bot_api.reply_message(event.reply_token, '200')
+    line_bot_api.reply_message(event.reply_token, message)
+    #line_bot_api.reply_message(event.reply_token, '200')
