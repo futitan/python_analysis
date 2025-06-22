@@ -1,3 +1,4 @@
+# 這是視窗介面
 import tkinter as tk
 
 class Window(tk.Tk):
