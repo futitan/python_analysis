@@ -1,5 +1,6 @@
 requests
-flask
-gunicorn   #flask 用WSGI伺服器
-python-dotenv
-google-genai
+flask      #Flask 和 Django 都是 Python 常用的 Web 框架
+gunicorn   #fFlask 可以搭配多種 WSGI 伺服器在生產環境中運行,gunicorn是其中一種, Gunicorn 只支援 UNIX/Linux 系統，不支援 Windows 系統。
+python-dotenv  #python-dotenv 是一個用來讀取 .env 檔案的 Python 套件，主要用途是將儲存在 .env 檔案中的環境變數（如 API 金鑰、資料庫連線資訊等敏感資料）自動載入到 Python 程式的環境變數中
+google-genai  #Gemini_API
+line-bot-sdk  
